@@ -17,14 +17,32 @@ const highlights = [
 const timeline = {
   work: [
     {
-      period: 'February 2021 - October 2023',
-      title: 'Software Engineer',
-      org: 'Reve Systems',
-    },
-    {
-      period: 'February 2024 - September 2024',
+      period: 'February 2024 – September 2024',
       title: 'Software Engineer',
       org: 'MarginEdge',
+      bullets: [
+        'Maintained and enhanced 15+ production-grade POS and accounting systems used by restaurant clients.',
+        'Developed 10+ backend features and fixes using Spring Boot to ensure data consistency and system stability.',
+        'Implemented an alternate file transfer mechanism for a legacy POS system to prevent timeout-related failures.',
+        'Wrote JUnit and Mockito unit tests to support a thorough and structured code review process.',
+        'Worked closely with QA engineers to validate features and reproduce defects before production releases.',
+      ],
+      stack: ['Java', 'Spring Boot', 'REST APIs', 'JavaScript', 'PostgreSQL', 'AngularJS', 'AWS'],
+    },
+    {
+      period: 'February 2021 – October 2023',
+      title: 'Software Engineer',
+      org: 'Reve Systems',
+      bullets: [
+        'Independently designed and delivered a full-stack digital office management (e-Nothi) system under tight deadlines, contributing to a contract that generated approximately 10% of overall project revenue.',
+        'Built generic multi-level approval and inspection workflows used by 15+ project modules.',
+        'Implemented payment processing by integrating multiple third-party payment APIs with backend validation.',
+        'Integrated Redis caching and Eureka-based service discovery, noticeably reducing page load times.',
+        'Developed 10+ reusable JavaScript & Thymeleaf components, including file uploaders and photo croppers.',
+        'Contributed to major PRP system modules (HR, budget, finance), covering over 50% of project scope.',
+        'Collaborated with frontend and QA teams to deliver production-ready features in an enterprise environment.',
+      ],
+      stack: ['Java', 'Spring Boot', 'REST APIs', 'Thymeleaf', 'JavaScript', 'Oracle', 'MySQL', 'Redis', 'Eureka'],
     },
   ],
   education: [
@@ -32,6 +50,7 @@ const timeline = {
       period: '2024 - Present',
       title: 'Master of Science in Computer Science',
       org: 'University of California, Davis',
+      note: 'CGPA: 4.00/4.00',
     },
     {
       period: '2016 - 2021',
@@ -63,18 +82,7 @@ const timeline = {
 const skills = [
   {
     title: 'Languages',
-    items: [
-      'C',
-      'C++',
-      'Java',
-      'Python',
-      'Assembly (80x86)',
-      'HTML',
-      'CSS',
-      'SQL',
-      'Matlab',
-      'Bash',
-    ],
+    items: ['C', 'C++', 'Java', 'Python', 'Assembly (80x86)', 'HTML', 'CSS', 'SQL', 'Matlab', 'Bash', 'Dafny'],
   },
   {
     title: 'Databases',
@@ -86,7 +94,7 @@ const skills = [
   },
   {
     title: 'Frameworks',
-    items: ['Spring Boot', 'Thymeleaf', 'JavaFX', 'OpenGL'],
+    items: ['Spring Boot', 'React', 'Thymeleaf', 'JavaFX', 'OpenGL'],
   },
   {
     title: 'Environments',
@@ -94,7 +102,7 @@ const skills = [
   },
   {
     title: 'Tools & Simulators',
-    items: ['Git', 'Lucidchart', 'Wireshark', 'NS-2', 'Logisim', 'Packet Tracer'],
+    items: ['Git', 'AWS', 'Z3', 'Lucidchart', 'Wireshark', 'NS-2', 'Logisim', 'Packet Tracer'],
   },
   {
     title: 'ML Libraries',
@@ -271,6 +279,13 @@ function App() {
               </a>
             </div>
 
+            <div className="hero-social">
+              <a href="mailto:ahnaffaisalalavi@gmail.com">Email</a>
+              <a href="https://www.linkedin.com/in/ahnaf-faisal-94b4b01b6/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/ahnaf005" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://scholar.google.com/citations?user=kNNfEqUAAAAJ" target="_blank" rel="noreferrer">Scholar</a>
+            </div>
+
             <ul className="highlight-list">
               {highlights.map((item) => (
                 <li key={item}>{item}</li>
@@ -325,10 +340,12 @@ function App() {
                 <div>
                   <dt>Current Program</dt>
                   <dd>MSc in Computer Science, UC Davis</dd>
+                  <dd>CGPA 4.00/4.00</dd>
                 </div>
                 <div>
                   <dt>Undergraduate</dt>
-                  <dd>BUET CSE, CGPA 3.87/4.00</dd>
+                  <dd>BSc in Computer Science, BUET</dd>
+                  <dd>CGPA 3.87/4.00</dd>
                 </div>
                 <div>
                   <dt>Industry</dt>
@@ -338,34 +355,42 @@ function App() {
             </aside>
           </div>
 
-          <div className="timeline-grid">
-            <article className="panel">
-              <h3>Work Experience</h3>
-              <div className="timeline-list">
-                {timeline.work.map((item) => (
-                  <div className="timeline-item" key={`${item.period}-${item.org}`}>
-                    <p className="timeline-period">{item.period}</p>
-                    <strong>{item.title}</strong>
-                    <p>{item.org}</p>
-                  </div>
-                ))}
-              </div>
-            </article>
+          <article className="panel tools-panel">
+            <h3>Education</h3>
+            <div className="timeline-list">
+              {timeline.education.map((item) => (
+                <div className="timeline-item" key={`${item.period}-${item.title}`}>
+                  <p className="timeline-period">{item.period}</p>
+                  <strong>{item.title}</strong>
+                  <p>{item.org}</p>
+                  {item.note ? <p>{item.note}</p> : null}
+                </div>
+              ))}
+            </div>
+          </article>
 
-            <article className="panel">
-              <h3>Education</h3>
-              <div className="timeline-list">
-                {timeline.education.map((item) => (
-                  <div className="timeline-item" key={`${item.period}-${item.title}`}>
-                    <p className="timeline-period">{item.period}</p>
-                    <strong>{item.title}</strong>
-                    <p>{item.org}</p>
-                    {item.note ? <p>{item.note}</p> : null}
+          <article className="panel tools-panel">
+            <h3>Work Experience</h3>
+            <div className="work-grid">
+              {timeline.work.map((item) => (
+                <div className="work-card" key={`${item.period}-${item.org}`}>
+                  <p className="timeline-period">{item.period}</p>
+                  <strong className="work-title">{item.title}</strong>
+                  <p className="work-org">{item.org}</p>
+                  <ul className="work-bullets">
+                    {item.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                  <div className="stack-tags">
+                    {item.stack.map((tag) => (
+                      <span className="stack-tag" key={tag}>{tag}</span>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </article>
-          </div>
+                </div>
+              ))}
+            </div>
+          </article>
 
           <div className="panel tools-panel">
             <h3>Honors and Achievements</h3>
@@ -383,11 +408,11 @@ function App() {
             <h2>Tools, languages, frameworks, and environments used across coursework and industry work.</h2>
           </div>
 
-          <div className="card-grid">
+          <div className="skill-grid">
             {skills.map((skill) => (
               <article className="panel skill-card" key={skill.title}>
                 <h3>{skill.title}</h3>
-                <ul className="tool-list compact-list">
+                <ul className="skill-chips">
                   {skill.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -453,6 +478,7 @@ function App() {
             ))}
           </div>
         </section>
+
       </main>
     </div>
   )
