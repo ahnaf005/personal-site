@@ -11,7 +11,7 @@ const navigation = [
 const highlights = [
   'MSc student in Computer Science at UC Davis',
   '3 years of software industry experience as a full stack engineer',
-  'Looking for new opportunities as graduation approaches',
+  'Looking for new opportunities under OPT work authorization',
 ]
 
 const timeline = {
@@ -232,6 +232,32 @@ const projects = [
     ],
     link: 'https://github.com/ahnaf005/llm-bug-report',
   },
+  {
+    title: 'React Anime',
+    meta: 'Personal Project',
+    description:
+      'A React application for browsing and searching popular anime, powered by the Jikan API (unofficial MyAnimeList REST API).',
+    bullets: [
+      'Browse top-ranked anime and search titles with debounced queries',
+      'View detailed anime information including synopses and character lists',
+      'Explore galleries with lightbox slideshow functionality',
+      'Built with React 19, Vite, React Router v7, and Tailwind CSS v4',
+    ],
+    link: 'https://github.com/ahnaf005/react-anime',
+  },
+  {
+    title: 'DX Ball Game',
+    meta: 'Personal Project',
+    description:
+      'A canvas-based DX Ball / Breakout game built with React and Vite, featuring ball physics, brick collisions, and an online leaderboard.',
+    bullets: [
+      'Paddle controls via keyboard and pointer input',
+      'Ball physics with angle-based reflection and brick collision detection',
+      'Scoring mechanics with Appwrite-powered leaderboard',
+      'Deployed on Vercel',
+    ],
+    link: 'https://github.com/ahnaf005/dx-ball-game',
+  },
 ]
 
 function App() {
@@ -261,13 +287,14 @@ function App() {
             <p className="eyebrow">Ahnaf Faisal</p>
             <h1>Graduate student at UC Davis with full stack software experience.</h1>
             <p className="hero-text">
-              Hi, I&apos;m Ahnaf Faisal, a graduate student at the University of
-              California, Davis pursuing an MSc in Computer Science.
+              Hi, I&apos;m Ahnaf Faisal, Hi, a Masters graduate in Computer Science 
+              from UC Davis. 
+
             </p>
             <p className="hero-text">
-              I also have three years of work experience in the software
-              industry as a full stack engineer, and I&apos;m nearing my graduation
-              at UC Davis while looking for opportunities again.
+              I also have three years of work experience in the software industry as 
+              a full stack engineer. 
+              I am currently under OPT Work Authorization and looking for opportunities in the industry again.
             </p>
 
             <div className="hero-actions">
@@ -302,7 +329,7 @@ function App() {
             </div>
             <div className="hero-card">
               <span>Current Stage</span>
-              <strong>Finishing graduate study at UC Davis and exploring next opportunities.</strong>
+              <strong>Graduated from UC Davis and exploring next opportunities.</strong>
             </div>
           </div>
         </section>
@@ -329,8 +356,8 @@ function App() {
                 engineer for MarginEdge.
               </p>
               <p>
-                I am now pursuing an MSc in Computer Science as a graduate
-                student at UC Davis.
+                I am now pursuing new opportunities after graduating from UC Davis with 
+                MS in Computer Sciense
               </p>
             </article>
 
