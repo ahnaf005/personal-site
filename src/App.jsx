@@ -233,6 +233,32 @@ const projects = [
     link: 'https://github.com/ahnaf005/llm-bug-report',
   },
   {
+    title: 'ASFI Merge Behaviors',
+    meta: 'Software Engineering Research',
+    description:
+      'A collaborative software engineering research project that analyzes pull request behaviors across Apache Software Foundation repositories through large-scale GitHub mining, statistical analysis, and machine learning.',
+    bullets: [
+      'Developed data processing pipelines to aggregate repository, pull request, and developer activity metrics',
+      'Conducted exploratory data analysis with Python to compare merge behaviors across active and retired Apache projects',
+      'Implemented LSTM and Bi-GRU models achieving nearly 90% prediction accuracy for pull request merge outcomes',
+      'Created reproducible visualizations and reports to support empirical software engineering research',
+    ],
+    link: 'https://github.com/zanereis/ASFI-Merge-Behaviors',
+  },
+  {
+    title: 'Concurrency in C++',
+    meta: 'Systems Programming Project',
+    description:
+      'A high-performance C++ concurrency framework implementing multiple thread pool architectures, work-stealing schedulers, and C++20 coroutine-based execution models, with benchmarking for parallel workloads.',
+    bullets: [
+      'Implemented fixed-size, elastic, and work-stealing thread pool schedulers using modern C++ concurrency primitives',
+      'Built a C++20 coroutine runtime to support asynchronous task execution and improve scalability',
+      'Benchmarked parallel algorithms such as Fibonacci across varying thread counts and execution strategies',
+      'Analyzed scheduling performance, throughput, and scalability through automated experiments and performance reports',
+    ],
+    link: 'https://github.com/RaiyanJahangir/Concurrency_in_Cpp',
+  },
+  {
     title: 'React Anime',
     meta: 'Personal Project',
     description:
@@ -257,7 +283,7 @@ const projects = [
       'Deployed on Vercel',
     ],
     link: 'https://github.com/ahnaf005/dx-ball-game',
-  },
+  }
 ]
 
 function App() {
