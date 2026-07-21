@@ -11,7 +11,7 @@ const navigation = [
 const highlights = [
   'MSc student in Computer Science at UC Davis',
   '3 years of software industry experience as a full stack engineer',
-  'Looking for new opportunities under OPT work authorization',
+  'Looking for new opportunities',
 ]
 
 const timeline = {
@@ -320,7 +320,7 @@ function App() {
             <p className="hero-text">
               I also have three years of work experience in the software industry as 
               a full stack engineer. 
-              I am currently under OPT Work Authorization and looking for opportunities in the industry again.
+              I am currently under OPT Work Authorization and looking for opportunities.
             </p>
 
             <div className="hero-actions">
